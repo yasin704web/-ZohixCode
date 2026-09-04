@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کنترل‌روم آقا یاسین</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div class="bg-mesh"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ی</span>
+      <span class="brand-text">کنترل‌روم <strong>آقا یاسین</strong></span>
+    </div>
+    <div class="live-clock" id="liveClock">--:--:--</div>
+  </header>
+
+  <main class="layout">
+
+    <section class="hero">
+      <p class="hero-eyebrow">یادآوری بعدی</p>
+      <h1 class="hero-title" id="nextReminderText">در حال بارگذاری...</h1>
+      <div class="hero-countdown" id="countdown">--:--:--</div>
+      <p class="hero-sub">تا رسیدن این لحظه</p>
+    </section>
+
+    <section class="panel reminders-panel">
+      <div class="panel-head">
+        <h2>یادآوری‌های فعال</h2>
+        <span class="count-badge" id="reminderCount">0</span>
+      </div>
+      <ul class="reminder-list" id="reminderList"></ul>
+    </section>
+
+    <section class="panel add-panel">
+      <div class="panel-head">
+        <h2>افزودن یادآوری</h2>
+      </div>
+      <form id="addForm" class="add-form">
+        <div class="field">
+          <label for="timeInput">ساعت</label>
+          <input type="time" id="timeInput" required />
+        </div>
+        <div class="field">
+          <label for="textInput">متن یادآوری</label>
+          <input type="text" id="textInput" placeholder="مثلاً: وقت پست ریلزه!" required />
+        </div>
+        <button type="submit" class="add-btn">افزودن به لیست</button>
+      </form>
+    </section>
+
+    <section class="panel status-panel">
+      <div class="panel-head">
+        <h2>وضعیت اتصال</h2>
+      </div>
+      <ul class="status-list">
+        <li>
+          <span class="dot dot-on"></span>
+          <span class="platform-name">تلگرام</span>
+          <span class="platform-state">متصل</span>
+        </li>
+        <li>
+          <span class="dot dot-off"></span>
+          <span class="platform-name">اینستاگرام</span>
+          <span class="platform-state">در انتظار اتصال</span>
+        </li>
+        <li>
+          <span class="dot dot-off"></span>
+          <span class="platform-name">یوتیوب</span>
+          <span class="platform-state">در انتظار اتصال</span>
+        </li>
+        <li>
+          <span class="dot dot-off"></span>
+          <span class="platform-name">تیک‌تاک</span>
+          <span class="platform-state">در انتظار اتصال</span>
+        </li>
+      </ul>
+      <p class="status-note">این بخش فعلاً نمایشیه — بعد از وصل شدن به بک‌اند، وضعیت واقعی رو نشون می‌ده.</p>
+    </section>
+
+  </main>
+
+  <footer class="footnote">
+    این نسخه فرانت‌اند مستقل است و هنوز به ربات تلگرام وصل نیست.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
